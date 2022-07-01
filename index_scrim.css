@@ -1,0 +1,24 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: green;
+    font-family: "Exo 2", sans-serif;
+    height: 100vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+button {
+    background-color: #FFF100;
+    cursor: pointer;
+    border: none;
+}
+
+button.draw {
+    font-size: 1.2em;
+    padding: 10px;
+}
