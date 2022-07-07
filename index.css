@@ -5,7 +5,7 @@ html, body {
     background-color: green;
     font-family: 'Roboto Condensed', sans-serif;
     font-size: larger;
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
 }
 
 header {
@@ -54,7 +54,7 @@ img {
     width: 12.5rem;
     height: 18rem;
     margin: .5rem auto;
-    border: .1rem black solid;
+    border: .1rem #fff solid;
     border-radius: .313rem;
 }
 /* || ID SPECIFIC */
@@ -67,27 +67,28 @@ img {
     text-align: center;
 }
 
-#result-container, #card-count-container, #scoreboard-container, #cards-container, #scoreboard {
+#card-count-container, #scoreboard-container, #cards-container, #scoreboard {
     text-align: center;
     margin: 0 auto;
+    color: #fff;
 
 }
 
 #new-deck-btn {
-    padding: 1em;
-    margin: 1em auto;
+    padding: 1rem;
+    margin: 1rem auto;
 
 }
 
 #draw-two-btn {
-    padding: 1em;
+    padding: 1rem;
     margin: 0 auto;
 }
 
 #reset-game-btn {
     background-color: #fff;
     margin: 1rem auto;
-    padding: 1em;
+    padding: 1rem;
 }
 
 #result-container {
@@ -100,4 +101,42 @@ img {
     justify-content: space-around;
     width: 50%;
     margin-top: 0;
+}
+
+
+
+/*MOBILE FRIENDLY CSS*/
+
+@media screen and (max-width: 1000px) {
+    body, html {
+        background-color: pink;
+    }
+
+    button {
+        color: pink;
+    }
+
+    img {
+        width: 115px;
+        height: 170px;
+    }
+    .card-outline {
+        width: 118px;
+        height: 173px;
+    }
+
+    html, body {
+        font-size: small;
+    }
+
+    /* .card-outline {
+        width: 6.25rem;
+        height: 9rem;
+        margin: .25rem auto;
+        border: .05rem #fff solid;
+        border-radius: .156rem;
+    } */
+
+    /* 230 by 340 */
+
 }
