@@ -5,6 +5,7 @@ html, body {
     background-color: green;
     font-family: 'Roboto Condensed', sans-serif;
     font-size: larger;
+    margin-bottom: 1em;
 }
 
 header {
@@ -27,6 +28,7 @@ button {
     transform: scale(1);
     transition: transform 250ms;
     cursor: pointer;
+    width: 25%;
 }
 
 button:hover, button:focus {
@@ -48,7 +50,7 @@ img {
 /* || CLASS SPECIFIC */
 
 .card-outline {
-    padding: .02rem 0;
+    /* padding: .02rem 0; */
     width: 12.5rem;
     height: 18rem;
     margin: .5rem auto;
@@ -65,32 +67,37 @@ img {
     text-align: center;
 }
 
-#card-images {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    /* max-height: 50px;
-    max-width: 20px; */
-}
-
-#result-container, #card-count-container, #scoreboard-container {
+#result-container, #card-count-container, #scoreboard-container, #cards-container, #scoreboard {
     text-align: center;
+    margin: 0 auto;
+
 }
 
 #new-deck-btn {
-    padding: 3em;
+    padding: 1em;
     margin: 1em auto;
 
 }
+
 #draw-two-btn {
-    padding: 3em;
-    width: 50%;
-    margin: 1em auto;
+    padding: 1em;
+    margin: 0 auto;
 }
 
 #reset-game-btn {
-    background-color: red;
-    width: 30%;
-    margin: 1em auto;
-    padding: 2rem;
+    background-color: #fff;
+    margin: 1rem auto;
+    padding: 1em;
+}
+
+#result-container {
+    width: 50%;
+}
+
+#cards-container, #scoreboard-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 50%;
+    margin-top: 0;
 }

@@ -5,6 +5,8 @@ const deck_image_container = document.getElementById("deck-image-container")
 const card_count_container = document.getElementById("card-count-container")
 const scoreboard_container = document.getElementById("scoreboard-container")
 const draw_two_btn = document.getElementById("draw-two-btn")
+const new_deck_btn = document.getElementById("new-deck-btn")
+
 console.log(result_container)
 console.log(cards_container)
 
@@ -30,20 +32,23 @@ function getNewDeck(){
             deckID = data.deck_id
             card_count = data.remaining
             displayCardCount(card_count, player_one_score, player_two_score)
+            new_deck_btn.disabled = true
         })
 }
 
 function displayCardCount(card_count, player_one_score, player_two_score){
     card_count_container.innerHTML = 
-    `<h2>Cards Remaining: ${card_count}</h2>`
+    `<h3>Cards Remaining: ${card_count}</h3>`
     if (card_count == 0){
         if (player_one_score > player_two_score){
             result_container.innerHTML =
             `Player 2 Won`
+            alert("Player 2 Won!")
         }
         else if (player_one_score < player_two_score){
             result_container.innerHTML =
             `Player 1 Won`
+            alert("Player 1 won!")
         }
         else {
             result_container.innerHTML =
@@ -64,7 +69,7 @@ function drawTwoCards(){
             cards_container.children[1].innerHTML = `<img src=${card1.image}>`
             cards_container.children[0].innerHTML = `<img src=${card2.image}>`
             result = determineHigherCard(card1, card2)
-            result_container.innerHTML = `<h2>${result} wins</h2>`
+            // result_container.innerHTML = `<h3>${result} wins</h3>`
             displayCardCount(card_count, player_one_score, player_two_score)
             setScore(player_one_score, player_two_score);
             if (card_count == 0){
@@ -73,7 +78,7 @@ function drawTwoCards(){
         })
     } 
     else {
-        alert("You need a deck first. Click the button in the top left.")
+        alert("You don't have a deck yet. Please click the New Deck button.")
     }
 }
 
@@ -107,8 +112,7 @@ function determineHigherCard(card1, card2){
 
 function setScore(player_one_score, player_two_score){
     scoreboard_container.innerHTML = 
-    `<h2>Scoreboard </h2>
-    <h2 id="player-one">Player 1: ${player_two_score}</h2>
+    `<h2 id="player-one">Player 1: ${player_two_score}</h2>
     <h2 id="player-two">Player 2: ${player_one_score}</h2>`
 }
 
