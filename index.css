@@ -17,7 +17,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    justify-content: space-between;
+    justify-content: top;
 }
 
 /* || BUTTONS, LINKS, FORMS */
@@ -57,6 +57,7 @@ img {
     border: .1rem #fff solid;
     border-radius: .313rem;
 }
+
 /* || ID SPECIFIC */
 #new-deck-container {
     width: 25%;
@@ -106,35 +107,20 @@ img {
 
 
 /*MOBILE FRIENDLY CSS*/
-/* 
 @media screen and (max-width: 1000px) {
     body, html {
-        background-color: pink;
-    }
-
-    button {
-        color: pink;
+        justify-content: start;
+        font-size: medium;
     }
 
     img {
         width: 115px;
         height: 170px;
     }
+
     .card-outline {
         width: 118px;
         height: 173px;
     }
 
-    html, body {
-        font-size: small;
-    } */
-
-    /* .card-outline {
-        width: 6.25rem;
-        height: 9rem;
-        margin: .25rem auto;
-        border: .05rem #fff solid;
-        border-radius: .156rem;
-    } */
-
-    /* 230 by 340 */
+}
