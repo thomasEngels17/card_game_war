@@ -106,7 +106,7 @@ img {
 
 
 /*MOBILE FRIENDLY CSS*/
-
+/* 
 @media screen and (max-width: 1000px) {
     body, html {
         background-color: pink;
@@ -127,7 +127,7 @@ img {
 
     html, body {
         font-size: small;
-    }
+    } */
 
     /* .card-outline {
         width: 6.25rem;
@@ -138,5 +138,3 @@ img {
     } */
 
     /* 230 by 340 */
-
-}
