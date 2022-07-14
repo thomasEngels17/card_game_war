@@ -66,15 +66,14 @@ function drawTwoCards(){
             card1 = data.cards[0]
             card2 = data.cards[1]
             card_count = data.remaining
-            cards_container.children[1].innerHTML = `<img src=${card1.image}>`
-            cards_container.children[0].innerHTML = `<img src=${card2.image}>`
-            result = determineHigherCard(card1, card2)
-            // result_container.innerHTML = `<h3>${result} wins</h3>`
-            displayCardCount(card_count, player_one_score, player_two_score)
-            setScore(player_one_score, player_two_score);
             if (card_count == 0){
                 draw_two_btn.disabled = true
             }
+            cards_container.children[1].innerHTML = `<img src=${card1.image}>`
+            cards_container.children[0].innerHTML = `<img src=${card2.image}>`
+            result = determineHigherCard(card1, card2)
+            displayCardCount(card_count, player_one_score, player_two_score)
+            setScore(player_one_score, player_two_score);
         })
     } 
     else {
@@ -114,6 +113,12 @@ function setScore(player_one_score, player_two_score){
     scoreboard_container.innerHTML = 
     `<h2 id="player-one">Player 1: ${player_two_score}</h2>
     <h2 id="player-two">Player 2: ${player_one_score}</h2>`
+    if (card_count === 0){
+        if (player_one_score > player_two_score){
+            scoreboard_container.innerHTML += 
+            `<h1>Player</h1>`
+        }
+    }
 }
 
 document.getElementById("new-deck-btn").addEventListener("click", getNewDeck)

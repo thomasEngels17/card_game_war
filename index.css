@@ -110,17 +110,17 @@ img {
 @media screen and (max-width: 1000px) {
     body, html {
         justify-content: start;
-        font-size: medium;
+        font-size: largest;
     }
 
     img {
-        width: 115px;
-        height: 170px;
+        width: 230px;
+        height: 340px;
     }
 
     .card-outline {
-        width: 118px;
-        height: 173px;
+        width: 234px;
+        height: 341px;
     }
 
 }
